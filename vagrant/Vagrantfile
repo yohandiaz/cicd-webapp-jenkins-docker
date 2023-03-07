@@ -14,15 +14,15 @@ jenkins.vm.network "private_network", ip: "192.168.56.10"
 jenkins.vm.provision "shell", inline: <<-SHELL
 apt-get clean
 sudo su
-apt update -y
-apt install openjdk-11-jre
+apt-get update -y
+apt-get install openjdk-11-jre -y
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
-apt update -y
-apt-get install jenkins
+apt-get update -y
+apt-get install jenkins -y
 SHELL
 end
 
