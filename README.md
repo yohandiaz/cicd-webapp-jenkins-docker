@@ -1,1 +1,1 @@
-# Project of deployment of a webapp using a Jenkins pipeline for CICD on Docker and automating the deployment of the Jenkins server and the Docker server with Vagrant
+# Webapp built using a Jenkins pipeline for CICD, this pipeline automates the deployment on Docker. Also the whole system is nearly completely automated by deploying the Jenkins server and the Docker server with Vagrant
